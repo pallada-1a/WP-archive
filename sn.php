@@ -32,3 +32,8 @@ add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 function wps_deregister_styles() {
     wp_dequeue_style( 'wp-block-library' );
 }
+//Funktion CSS ausladen in Ordner layout
+function get_stylesheet_uri_custom() {
+$stylesheet_uri_custom  = 'layout/css/';
+return apply_filters( 'stylesheet_uri_custom', $stylesheet_uri_custom );
+}
